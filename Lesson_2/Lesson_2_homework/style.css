@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+}
+
+body > h3 {
+    margin: 50px 20px;
+}
+
+.first_ul li {
+    width: 100px;
+    background: pink;
+    margin: 7px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.simpsons_family {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+.simpson {
+    width: 30%;
+    height: 750px;
+    background: #eaeaea;
+    margin-top: 20px;
+    border: 4px solid #c6c6c6;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.simpson img {
+    height: 400px;
+    margin-top: 50px;
+}
+
+.simpson p {
+    height: 145px;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.all_products {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+.product_card {
+    width: 22%;
+    height: 430px;
+    margin-top: 20px;
+    background: #e2e7ff;
+    border: 5px solid #a5befc;
+    box-sizing: border-box;
+    padding: 20px;
+    transition: 400ms;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.product_card:hover {
+    width: 21%;
+    background: #a5befc;
+    cursor: pointer;
+}
+
+.product_card img {
+    width: 100%;
+}
+
+
+/*Homework 2*/
+/*Homework 2*/
+/*Homework 2*/
+
+
+.wrap {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post-card {
+    width: 18%;
+    height: 300px;
+    margin-top: 20px;
+    background: #bffd88;
+    border: 3px solid #00ba00;
+    padding: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: 400ms;
+}
+
+.post-card:hover {
+    background: #00ba00;
+    cursor: pointer;
+}
+
+.post-card:hover h3 {
+    color: #fff;
+}
+
+.post-card:hover p {
+    color: #fff;
+    font-weight: 700;
+}
+
+.post-card h3 {
+    color: #005700;
+    text-align: center;
+    transition: 400ms;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #00ba00;
+    box-sizing: border-box;
+    padding: 3px;
+}
+
+.post-card p {
+    text-align: justify;
+    color: #000;
+    transition: 400ms;
+}
+
+/*Homework 3*/
+/*Homework 3*/
+/*Homework 3*/
+
+.users-box {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.user-block {
+    width: 40%;
+    margin-top: 20px;
+    border: 5px solid #a75757;
+    background: #e7c2c2;
+    box-sizing: border-box;
+    padding: 15px;
+    height: 300px;
+}
+
+.address-line {
+    display: flex;
+}
+
+.address-line p:nth-child(1) {
+    width: 20%;
+    margin: 7px;
+}
+
+.address-line p:nth-child(2) {
+    width: 50%;
+    margin: 7px;
+}
+
