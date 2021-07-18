@@ -251,8 +251,6 @@ let citiesWithId = [
 for (let i = 0; i < usersWithId.length; i++) {
     for (let j = 0; j < citiesWithId.length; j++) {
       if (usersWithId[i].id === citiesWithId[j].user_id) {
-          // usersWithCities[i].splice(i, 0, usersWithId[i].id, usersWithId[i].name, usersWithId[i].status, citiesWithId[j].country, citiesWithId[j].city)
-        // usersWithCities[i] = usersWithId[i].id.concat(citiesWithId[j].country)
           usersWithCities.push (
               {
                   id: usersWithId[i].id,
