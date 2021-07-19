@@ -71,6 +71,19 @@ let myFunc = function (a) {
 
 console.log(myFunc(array));
 
+// інший спосіб
+
+let myFunc_2 = function (array) {
+    array.sort(function (a, b) {
+        return a - b
+    })
+    let maxNum = array[array.length-1]
+    let minNum = array[0]
+    return (`Найбільше: ${maxNum}, найменше: ${minNum}`)
+}
+
+console.log(myFunc_2(array))
+
 
 // - створити функцію яка  створює блок з текстом. Текст задати через аргумент
 
