@@ -202,22 +202,66 @@ console.log(switching(someArray, 3));
 // let n2 = 'Ron Whisley'
 // let n3 = 'Hermione Granger'
 
+console.log(NT);
+
 let n1 = '    Harry       Potter      '
 let n2 = '    Ron       Whisley      '
 let n3 = '    Hermione       Granger      '
 
+let normalaizer = function (text) {
 
-//тут поки щось не виходить....(
+    while (text.includes('  ')) {
+        text = text.replaceAll('  ', ' ')
+    }
+    if (text.startsWith(' ')) {
+        text = text.slice(1, text.length)
+    }
+    if (text.endsWith(' ')) {
+        text = text.slice(0, text.length - 1)
+    }
 
-let normalaizer = function (n) {
-    i=0
-    do {
-        word = n.replaceAll('  ', ' ')
-        i++
-    } while (i < n.length)
-
-    return word
+    return text
 }
 
-console.log(normalaizer(n1));
 console.log(n1);
+console.log(normalaizer(n1));
+
+console.log(n2);
+console.log(normalaizer(n2));
+
+console.log(n3);
+console.log(normalaizer(n3));
+
+
+// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву.
+// Зберігаючи при цьому порядок не нульових значень.
+//     Двожина масиву від 2 до 100
+// EXAMPLE:
+//     [1,0,6,0,3] => [1,6,3,0,0]
+//     [0,1,2,3,4] => [1,2,3,4,0]
+//     [0,0,1,0]   => [1,0,0,0]
+
+console.log(NT);
+
+let zeroesNums_1 = [0, 33, 0, 77, 0, 35, 16, 84, 0, 71]
+let zeroesNums_2 = [42, 13, 0, 47, 7, 0, 26, 87, 0, 21]
+let zeroesNums_3 = [12, 33, 2, 47, 0, 45, 26, 84, 0, 21]
+let zeroesNums_4 = [12, 23, 0, 41, 0, 35, 26, 74, 0, 24]
+let goToEnd = 0 // яке число ми хочемо відсунути назад (не обов'язково ж 0)
+
+let zeroes = function (arr, end) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i] === end) {
+            arr.splice(i, 1)
+            arr.push(end)
+        }
+    }
+    return arr
+}
+
+console.log(zeroes(zeroesNums_1, goToEnd));
+console.log(zeroes(zeroesNums_2, goToEnd));
+console.log(zeroes(zeroesNums_3, goToEnd));
+console.log(zeroes(zeroesNums_4, goToEnd));
+
+
