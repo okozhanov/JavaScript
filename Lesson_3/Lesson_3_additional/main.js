@@ -130,16 +130,94 @@ console.log(nums_copy);
 
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
 
-abs = ['a', 'b', 'c']
-let word = 'xyz'
+console.log(NT);
 
-for (let i = 0; i < abs.length; i++) {
-    word[i] = abc[i]
+abc = ['a', 'b', 'c']
+let word = ''
+
+for (let i = 0; i < abc.length; i++) {
+    word += abc[i]
 }
 
 console.log(word)
 
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
 
+console.log(NT);
+
+abc = ['a', 'b', 'c']
+word = ''
+
+i = 0
+while (i < abc.length) {
+    word += abc[i]
+    i++
+}
+
+console.log(word);
+
+
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
 
+console.log(NT);
+
+abc = ['a', 'b', 'c']
+word = ''
+
+for (const letter of abc) {
+    word += letter
+}
+
+console.log(word)
+
+
+// -   функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
+//   EXAMPLE:
+//   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
+//   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
+//   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
+
+console.log(NT);
+
+let someArray = ['abc', 123, 321, 'xyz', true, false, 'iGwt']
+
+let switching = function (arr, i) {
+    let tmp = arr[i]
+    arr[i] = arr[i+1]
+    arr[i+1] = tmp
+    return arr
+}
+
+console.log(switching(someArray, 0));
+console.log(switching(someArray, 1));
+console.log(switching(someArray, 2));
+console.log(switching(someArray, 3));
+
+// - Дано список імен.
+//     let n1 = '    Harry       Potter      '
+// let n2 = '    Ron       Whisley      '
+// let n3 = '    Hermione       Granger      '
+// Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
+// let n1 = 'Harry Potter'
+// let n2 = 'Ron Whisley'
+// let n3 = 'Hermione Granger'
+
+let n1 = '    Harry       Potter      '
+let n2 = '    Ron       Whisley      '
+let n3 = '    Hermione       Granger      '
+
+
+//тут поки щось не виходить....(
+
+let normalaizer = function (n) {
+    i=0
+    do {
+        word = n.replaceAll('  ', ' ')
+        i++
+    } while (i < n.length)
+
+    return word
+}
+
+console.log(normalaizer(n1));
+console.log(n1);
