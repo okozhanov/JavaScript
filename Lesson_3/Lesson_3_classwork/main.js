@@ -157,7 +157,10 @@ let arrayOfKeys = []
 
 let keys = function (obj) {
     for (const objElement of obj) {
-        arrayOfKeys.push(Object.keys(objElement))
+        let arr = Object.keys(objElement)
+        for (const key of arr) {
+            arrayOfKeys.push(key)
+        }
     }
     return arrayOfKeys
 }
@@ -174,7 +177,10 @@ let arrayOfValues = []
 
 let values = function (obj) {
     for (const objElement of obj) {
-        arrayOfValues.push(Object.values(objElement))
+        let arr = Object.values(objElement)
+        for (const value of arr) {
+            arrayOfValues.push(value)
+        }
     }
     return arrayOfValues
 }
