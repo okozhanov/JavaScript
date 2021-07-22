@@ -73,11 +73,9 @@ let car = function (brand, country, year, maxSpeed, engineVolume) {
         this.year = this.year + newValue
         return this.year
     }
-    this.addDriver = function (name, age, status, experience) {
-        this.addDriver.name = name
-        this.addDriver.age = age
-        this.addDriver.status = status
-        this.addDriver.experience = experience
+
+    this.addDriver = function (driver) {
+        this.driver = driver
     }
 }
 
@@ -88,9 +86,16 @@ car_1.drive()
 car_1.info()
 console.log(car_1.increaseMaxSpeed(35));
 console.log(car_1.changeYear(20));
-car_1.addDriver('David', 35, 'married', 13)
-console.log(car_1);
 
+let myDriver = {
+    name: 'David',
+    age: 35,
+    status: 'married',
+    experience: 13
+}
+car_1.addDriver(myDriver)
+
+console.log(car_1);
 
 // - (Те саме, тільки через клас)
 // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску,
@@ -126,12 +131,9 @@ class Car {
         this.year = this.year + newValue
         return this.year
     }
-    // addDriver = function (name, age, status, experience) {
-    //     addDriver.name = name
-    //     addDriver.age = age
-    //     addDriver.status = status
-    //     addDriver.experience = experience
-    // }
+    addDriver = function (driver) {
+        this.driver = driver
+    }
 }
 
 let car_2 = new Car('Zaz', 'Ukraine', 1863, 80, 0.6)
@@ -146,6 +148,71 @@ console.log(car_2.increaseMaxSpeed(15));
 
 console.log(car_2.changeYear(50));
 
-// car_2.addDriver('Dido', 78, 'married', 60)
+let myDriver_2 = {
+    name: 'Dido',
+    age: 78,
+    status: 'married',
+    experience: 60
+}
+
+car_2.addDriver(myDriver_2)
 
 console.log(car_2);
+
+
+// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити 10 попелюшок , покласти їх в масив.
+// Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+//     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+
+
+nt()
+
+
+class Cinderella { constructor(name, age, footSize) {
+        this.name = name
+        this.age = age
+        this.footSize = footSize
+    }
+}
+
+class Prince { constructor(name, age, shoeSize) {
+        this.name = name
+        this.age = age
+        this.shoeSize = shoeSize
+    }
+}
+
+let cinderellas = []
+
+cinderellas.push(new Cinderella('Ella', 37, 38))
+cinderellas.push(new Cinderella('Karinka', 20, 36))
+cinderellas.push(new Cinderella('Dasha', 27, 39))
+cinderellas.push(new Cinderella('Sonya', 19, 38))
+cinderellas.push(new Cinderella('Olenka', 22, 37))
+cinderellas.push(new Cinderella('Natalya', 25, 37))
+cinderellas.push(new Cinderella('Sasha', 14, 34))
+cinderellas.push(new Cinderella('Nelya', 82, 38))
+cinderellas.push(new Cinderella('Masha', 21, 39))
+cinderellas.push(new Cinderella('Marta', 19, 35))
+
+console.log(cinderellas);
+
+let prince = new Prince('Lyosha', 21, 36)
+
+let myCinderella;
+
+for (let i = 0; i < cinderellas.length; i++) {
+    if (cinderellas[i].footSize === prince.shoeSize) {
+        myCinderella = cinderellas[i].name
+    }
+}
+
+console.log(`My cinderella is ${myCinderella}`)
+
+
+//     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+
+
+let myCinderella_obj = cinderellas.find(cinderella => cinderella.footSize === prince.shoeSize)
+
+console.log(`My cinderella is ${myCinderella_obj.name}`)
