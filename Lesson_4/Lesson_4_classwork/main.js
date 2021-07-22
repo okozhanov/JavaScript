@@ -117,21 +117,21 @@ class Car {
         this.engineVolume = engineVolume;
     };
 
-    drive = function () {
+    drive () {
         console.log('Ми їдемо зі швидкістю', this.maxSpeed, 'кілометрів на годину')
     }
-    info = function () {
+    info () {
         console.log('Бренд:', this.brand, '- країна:', this.country, '- рік випуску:', this.year, '- максимальна швидкість:', this.maxSpeed, '- двигун:', this.engineVolume)
     }
-    increaseMaxSpeed = function (newSpeed) {
+    increaseMaxSpeed (newSpeed) {
         this.maxSpeed = this.maxSpeed + newSpeed
         return this.maxSpeed
     }
-    changeYear = function (newValue) {
+    changeYear (newValue) {
         this.year = this.year + newValue
         return this.year
     }
-    addDriver = function (driver) {
+    addDriver (driver) {
         this.driver = driver
     }
 }
