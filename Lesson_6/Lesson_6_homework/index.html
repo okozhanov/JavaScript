@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="styles.css">
+        <title>Document</title>
+</head>
+<body>
+
+        <div class="posts"></div>
+
+
+        <script>
+
+            let posts = document.getElementsByClassName('posts')[0]
+
+                fetch('https://jsonplaceholder.typicode.com/posts').then(function(value) {
+                    return value.json()
+                })
+                .then(function (value) {
+                    for (const myObject of value) {
+                        let post = document.createElement('div')
+                        post.classList.add('post')
+
+                        let header_2 = document.createElement('h2')
+                        let header_3 = document.createElement('h3')
+                        let paragraph = document.createElement('p')
+
+                        header_2.innerHTML = myObject.title
+                        header_3.innerHTML = `user ${myObject.userId}, post ${myObject.id}`
+                        paragraph.innerHTML = myObject.body
+
+                        post.append(header_2, header_3, paragraph)
+
+                        posts.appendChild(post)
+                    }
+                })
+
+            document.body.appendChild(posts)
+
+            let comments = document.createElement('div')
+            comments.classList.add('comments')
+
+                fetch('https://jsonplaceholder.typicode.com/comments')
+                    .then(value => value.json())
+                    .then(value => {
+                        for (myObject of value) {
+                            let comment = document.createElement('div')
+                            comment.classList.add('comment')
+
+                            let header_2 = document.createElement('h2')
+                            let header_3 = document.createElement('h3')
+                            let header_4 = document.createElement('h4')
+                            let paragraph = document.createElement('p')
+
+                            header_2.innerHTML = myObject.name
+                            header_3.innerHTML = `comment to the post ${myObject.postId}, comment ${myObject.id}`
+                            header_4.innerHTML = myObject.email
+                            paragraph.innerHTML = myObject.body
+
+                            comment.append(header_2, header_3, header_4, paragraph)
+
+                            comments.appendChild(comment)
+                        }
+                    })
+
+            document.body.appendChild(comments)
+
+
+
+
+        </script>
+
+</body>
+</html>
