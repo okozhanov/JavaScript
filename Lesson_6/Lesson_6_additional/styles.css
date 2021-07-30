@@ -1,0 +1,72 @@
+
+body {
+    margin: 0;
+}
+
+.page {
+    display: flex;
+}
+
+.users {
+    width: 40%;
+    background: #fdf188;
+}
+
+.posts {
+    width: 35%;
+    background: #bffd88;
+}
+
+.comments {
+    width: 25%;
+    background: #ffaeae;
+}
+
+.users, .posts, .comments {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.user, .post, .comment {
+    border-bottom: 4px solid #929292;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h5 {
+    margin: 0;
+}
+
+.user_button, .post_button {
+    width: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 100px;
+    text-align: center;
+    transition: 400ms;
+    cursor: pointer;
+    margin: 15px auto;
+}
+
+.user_button {
+    background: #d2c525;
+}
+
+.user_button:hover {
+    background: #847a07;
+    color: #fff;
+}
+
+.user_button:checked {
+    background: #847a07;
+    color: #fff;
+}
+
+.post_button {
+    background: #87cd44;
+}
+
+.post_button:hover {
+    background: #41651a;
+    color: #fff;
+}
