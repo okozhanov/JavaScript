@@ -1,0 +1,43 @@
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.users {
+    margin: 30px auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user {
+    background: #fdf188;
+    width: 44%;
+    margin: 3%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user_button {
+    margin-top: 50px;
+    background: #d5c337;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.user_button:hover {
+    background: #fff;
+    box-sizing: border-box;
+    border: 5px solid #d5c337;
+}
